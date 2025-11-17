@@ -1,0 +1,279 @@
+{
+  "title": "StartupLead",
+  "type": "object",
+  "required": [
+    "companyName",
+    "oneLiner",
+    "sector",
+    "businessType",
+    "businessModel",
+    "responsibleForNextStep"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "companyName": {
+      "type": "string",
+      "description": "Name of the start-up",
+      "minLength": 1
+    },
+    "oneLiner": {
+      "type": "string",
+      "description": "Short start-up description",
+      "minLength": 50,
+      "maxLength": 280
+    },
+    "sector": {
+      "type": "array",
+      "description": "Business sectors (select 1-3 options)",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "1.1 Real Estate (Residential)",
+          "1.2 Real Estate (Commercial)",
+          "1.3 Real Estate (Industrial)",
+          "1.4 Real Estate (Hospitality)",
+          "1.5 Real Estate (Retail)",
+          "1.6 Real Estate (Construction)",
+          "1.7 Real Estate (Public)",
+          "2.1 Infrastructure (Energy)",
+          "2.2 Infrastructure (Transportation)",
+          "2.3 Infrastructure (Water and Sanitation)",
+          "2.4 Infrastructure (Waste)",
+          "2.5 Infrastructure (TelCo and Data)",
+          "3.1 Safety (Public Safety)",
+          "3.2 Safety (Environmental Safety)",
+          "3.3 Safety (Asset Safety)",
+          "3.4 Safety (Private Safety)",
+          "3.5 Health",
+          "4.1 Logistic & Supply (Air)",
+          "4.2 Logistic & Supply (Road)",
+          "4.3 Logistic & Supply (Rail)",
+          "4.4 Logistic & Supply (Sea)",
+          "4.5 Logistic & Supply (Urban Mobility)",
+          "4.6 Logistic & Supply (Warehousing)",
+          "5.1 Food Production (Agri- & Horticulture)",
+          "5.2 Food Production (Aquaculture)",
+          "5.3 Food Production (Refinery)",
+          "6.1 Natural Resources (Precious Metals)",
+          "6.2 Natural Resources (Natural Gas and Oil)",
+          "6.3 Natural Resources (Forestry and Logging)",
+          "6.4 Natural Resources (CO2 Offsetting)",
+          "7.1 Space (Rocket Launch Technology)",
+          "7.2 Space (Satellite Dev & Ops)",
+          "7.3 Space (In-Space Manufacturing)",
+          "7.4 Space (Data Usage and Processing)",
+          "8. Others"
+        ]
+      }
+    },
+    "businessType": {
+      "type": "array",
+      "description": "Business types (select 1-3 options)",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "Financing",
+          "Brokerage",
+          "Asset Management",
+          "Property Management",
+          "Facility Management",
+          "Development",
+          "IoT",
+          "Certification",
+          "Customer Experience Management",
+          "Operations",
+          "Staging",
+          "Built World",
+          "Machine Management",
+          "Material Management",
+          "Production Management",
+          "Logistics Management",
+          "Contract Management",
+          "Risk Management",
+          "Workforce Management",
+          "IT Management",
+          "(Energy) Efficiency Management",
+          "Planning",
+          "Installation",
+          "Generation",
+          "Storage",
+          "Maintenance",
+          "Monitoring",
+          "Procurement",
+          "Trading",
+          "Construction",
+          "Traffic Management",
+          "Parking Management",
+          "Treatment",
+          "Collection",
+          "Processing",
+          "Training / Education",
+          "Mitigation",
+          "Assessment",
+          "Communication",
+          "Booking Management",
+          "Crew Management",
+          "Technology Management",
+          "Ground Operations (Management)",
+          "Commercial (Freight) Management",
+          "Toure Planning and Optimization",
+          "Distribution",
+          "Inventory Management",
+          "Facility Design and Layout",
+          "Storage and Organization",
+          "Inventory Tracking and Control",
+          "Order Fulfillment",
+          "Cultivation",
+          "Irrigation Management",
+          "Quality Management",
+          "Preservation Management",
+          "Equipment Management",
+          "Cost Management",
+          "Yield Optimization",
+          "Detection",
+          "Mining and Extraction",
+          "Refining and Processing",
+          "Trading and Distribution",
+          "Circular Economy",
+          "Extraction and Drilling",
+          "Transportation and Storage",
+          "Forest Management",
+          "Ecosystem Protection",
+          "Processing / Manufacturing",
+          "Robotics & Automation",
+          "Safety",
+          "Design and Development",
+          "Manufacturing",
+          "Integration",
+          "Data Harvesting",
+          "Data Processing",
+          "Telecommunications",
+          "Optimisation",
+          "Architecture",
+          "Purification",
+          "Carbon Capturing",
+          "Reporting",
+          "Recycling",
+          "Forecast",
+          "Verification",
+          "Health Tech",
+          "Document Management",
+          "Refurbishment",
+          "Platform",
+          "Prediction",
+          "ERP System",
+          "Navigation",
+          "Data Center",
+          "Incubation",
+          "VC Fund",
+          "Accounting",
+          "Accelerator",
+          "Launching",
+          "Simulation",
+          "Sourcing",
+          "Monetization",
+          "Production",
+          "Research",
+          "Design",
+          "Workflow Management",
+          "LEO Satellite Network",
+          "B2B"
+        ]
+      }
+    },
+    "businessModel": {
+      "type": "array",
+      "description": "Business models (select 1-3 options)",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "D2C",
+          "B2G",
+          "B2B2C",
+          "B2C",
+          "B2B",
+          "C2B",
+          "Service",
+          "Software Hardware",
+          "Licensing",
+          "Pay-per-Use",
+          "One-off Revenue",
+          "Advertising / Affiliate",
+          "Consulting / Project-based",
+          "Marketplace",
+          "Subscription",
+          "MaaS"
+        ]
+      }
+    },
+    "responsibleForNextStep": {
+      "type": "string",
+      "enum": [
+        "28bd872b-594c-8114-a60a-0002119ee0e3",
+        "284d872b-594c-81fd-ae68-0002c92032c1"
+      ],
+      "description": "Responsible person for the next step. Use 28bd872b-594c-8114-a60a-0002119ee0e3 (Konrad Lange) for Space sectors (7.1-7.4), Infrastructure (Water and Sanitation) (2.3), Logistic & Supply (4.1-4.6), Safety (3.1-3.4), Health (3.5), and Others (8). Use 284d872b-594c-81fd-ae68-0002c92032c1 (Jessica Fernsler) for Real Estate (1.1-1.7), Infrastructure (Energy) (2.1), Infrastructure (Transportation) (2.2), Infrastructure (Waste) (2.4), Infrastructure (TelCo and Data) (2.5), Food Production (5.1-5.3), and Natural Resources (6.1-6.4)."
+    },
+    "country": {
+      "type": "string",
+      "description": "Full English country name (e.g., 'Germany', 'France')"
+    },
+    "websiteUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "founderLinkedInUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "LinkedIn URL of the founder",
+      "pattern": "^https?://(www\\\\.)?linkedin\\\\.com/.*$"
+    },
+    "founderFirstName": {
+      "type": "string",
+      "description": "First name of founder",
+      "minLength": 1
+    },
+    "founder": {
+      "type": "string",
+      "description": "Full name of founder"
+    },
+    "founderLanguage": {
+      "type": "string",
+      "description": "Main communication language of the founder (e.g., 'ENG')"
+    }
+  },
+  "examples": [
+    {
+      "companyName": "ExampleStartup",
+      "oneLiner": "AI copilot for SMB bookkeeping",
+      "sector": [
+        "1.1 Real Estate (Residential)",
+        "2.1 Infrastructure (Energy)"
+      ],
+      "businessType": [
+        "Platform",
+        "B2B"
+      ],
+      "country": "Germany",
+      "websiteUrl": "https://examplestartup.com",
+      "businessModel": [
+        "Subscription",
+        "B2B"
+      ],
+      "responsibleForNextStep": "284d872b-594c-81fd-ae68-0002c92032c1",
+      "founder": "Jane Doe",
+      "founderLinkedInUrl": "https://www.linkedin.com/in/janedoe",
+      "founderFirstName": "Jane",
+      "founderLanguage": "ENG"
+    }
+  ]
+}
